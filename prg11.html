@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="studentApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="studentController">
+    <h2>Student Names</h2>
+    <h3>Original Names: </h3>
+    <ul>
+        <li ng-repeat="nameinnames">
+            {{name}}
+        </li>
+    </ul>
+    <h3>Names in Uppercase: </h3>
+    <ul>
+        <li ng-repeat="nameinnames">
+            {{name|uppercase}}
+        </li>
+    </ul>
+    <script>
+        var app = angular.module('studentApp',[]);
+        app.controller('studentController',function($scope){
+            $scopr.names = ['Raj','Ram','Sam']
+        });
+    </script>
+</body>
+</html>
